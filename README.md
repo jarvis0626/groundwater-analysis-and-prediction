@@ -42,7 +42,7 @@ source venv/bin/activate
 <pre>
 pip install -r requirements.txt
 </pre>
-5. Run the app
+4. Run the app
 <pre>
 python app.py
 </pre>

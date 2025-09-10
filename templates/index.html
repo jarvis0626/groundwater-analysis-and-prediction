@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groundwater Quality Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Groundwater Quality Prediction</h1>
+    </header>
+    
+    <main class="content-container">
+        <!-- Left Section: Dropdown & Graph -->
+        <section id="left-section">
+            <div id="state-selector">
+                <label for="state">Select State:</label>
+                <select id="state">
+                    <!-- States will be populated dynamically -->
+                </select>
+                <button id="predict-btn">Show Data</button>
+            </div>
+            <div id="graph-section">
+                <canvas id="qualityChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Right Section: Average Values & Evaluation Metrics -->
+        <section id="right-section">
+            <div id="avg-values">
+                <h3>Average Feature Values</h3>
+                <p><strong>pH:</strong> <span id="avg-pH">-</span></p>
+                <p><strong>Conductivity:</strong> <span id="avg-conductivity">-</span></p>
+                <p><strong>BOD:</strong> <span id="avg-bod">-</span></p>
+                <p><strong>Nitrate:</strong> <span id="avg-nitrate">-</span></p>
+            </div>
+
+            <!-- Evaluation Metrics Section -->
+            <div id="evaluation-metrics">
+                <h3>Evaluation Metrics</h3>
+                <p><strong>RMSE:</strong> <span id="rmse">-</span></p>
+                <p><strong>MAE:</strong> <span id="mae">-</span></p>
+                <p><strong>R²:</strong> <span id="r2">-</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

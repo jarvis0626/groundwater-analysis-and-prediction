@@ -1,0 +1,145 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+}
+
+/* Main container */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Left Section: Dropdown & Graph */
+#left-section {
+    width: 65%;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Graph Section: Increased Size */
+#graph-section {
+    width: 100%;
+    height: 500px; /* Increased height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Make Chart Bigger */
+canvas#qualityChart {
+    width: 100% !important;  /* Full width of parent */
+    height: 100% !important; /* Full height of parent */
+    max-width: 900px;  /* Maximum width */
+    max-height: 500px; /* Maximum height */
+}
+
+/* Right Section: Average Values & Evaluation Metrics */
+#right-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Average Values & Evaluation Metrics Sections */
+#avg-values, #evaluation-metrics {
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Headings */
+#avg-values h3, #evaluation-metrics h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0056b3;
+    text-align: center;
+}
+
+/* Metric Labels */
+#avg-values p, #evaluation-metrics p {
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 5px;
+    border-left: 4px solid #007bff;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Dropdown & Button */
+#state-selector {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#state {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#predict-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#predict-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #left-section, #right-section {
+        width: 100%;
+    }
+
+    #avg-values, #evaluation-metrics {
+        width: 100%;
+    }
+    
+    /* Adjust chart for smaller screens */
+    #graph-section {
+        height: 350px; /* Smaller height for mobile */
+    }
+
+    canvas#qualityChart {
+        max-height: 350px; /* Resize for small screens */
+    }
+}
